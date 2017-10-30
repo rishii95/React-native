@@ -9,8 +9,7 @@ import ProfileScreen from './ProfileScreen'
 
 const SimpleApp = StackNavigator({
   Home: { screen: LoginScreen },
-  Profile:{screen:ProfileScreen}},{ 
-    headerMode: 'screen' 
+  Profile:{screen:ProfileScreen}
 });
 
 class Home extends React.Component {

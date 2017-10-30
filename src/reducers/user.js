@@ -8,14 +8,16 @@ import {LOGOUT} from '../actions';
 
 // let newState={user:{loggedIn:false}};
 const initialState={
-    userLoggedIn:false
+    userLoggedIn:false,
+    ChatName:[]
 };
 export default function(state=initialState,action){
     switch(action.type){
      case LOGIN_SUCCESS:
         // state.userLoggedIn=true;
         return Object.assign({}, state, {
-            userLoggedIn: true
+            userLoggedIn: true,
+            ChatName:action.username
         });
     case LOGOUT:
         // state.userLoggedIn=true;

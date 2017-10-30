@@ -5,9 +5,10 @@ export const LOGOUT="LOGOUT";
 
 export function login(userCredentials){
     console.log("hi");
-    if(userCredentials.username=="rishi"&&userCredentials.password=="rishi")
+    if((userCredentials.username=="rishi"&&userCredentials.password=="rishi")||(userCredentials.username=="manasa"&&userCredentials.password=="manasa"))
     return{
-        type:LOGIN_SUCCESS
+        type:LOGIN_SUCCESS,
+        username:userCredentials.username
     }
     else
     return{

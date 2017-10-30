@@ -8,7 +8,9 @@ import * as Actions from '../actions';
 
 function mapStateToProps(state, props) {
   return {
-    user:state.userReducers.userLoggedIn
+    user:state.userReducers.userLoggedIn,
+    userName:state.userReducers.ChatName
+    
     };
 }
 function mapDispatchToProps(dispatch){return bindActionCreators(Actions,dispatch);}
@@ -34,9 +36,6 @@ class LoginScreen extends React.Component {
     // static navigationOptions = {
     //   title: 'Welcome'
     // };
-    static navigationOptions = {
-      header: { visible:false }
-          };
     render() {
       const {navigate}=this.props.navigation;
       console.log("rishi",this.props.user,this.props)      
